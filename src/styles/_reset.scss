@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root{
+    --headerHeight: 3rem;
+
+    // Colors
+    --hue: 0;
+    --sat: 0%;
+    --titleColor: hsl(var(--hue), var(--sat), 20%);
+    --titleColorDark: hsl(var(--hue), var(--sat), 0%);
+    --textColor: hsl(var(--hue), var(--sat), 46%);
+    --bodyColor: hsl(var(--hue), var(--sat), 98%);
+    --containerColor: #fff;
+
+    // Fontes
+    --bodyFont: 'Poppins', sans-serif;
+
+    // Tamanhos
+    --bigFontSize: 3.5rem;
+    --h1FontSize: 2.25rem;
+    --h2FontSize: 1.5rem;
+    --h3FontSize: 1.25rem;
+    --normalFontSize: 1rem;
+    --smallFontSize: 0.9rem;
+    --tinyFontSize: 0.625rem;
+
+    // Font weight
+    --fontNormal: 400;
+    --fontMedium: 500;
+    --fontSemiBold: 600;
+
+    // Margins
+    --mb-0-25: 0.25rem;
+    --mb-0-5: 0.5rem;
+    --mb-0-75: 0.75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+    // z-index
+    --zTooltip: 10;
+    --zFixed: 100;
+    --zModal: 1000;
+}
+
+@media screen and (max-width: 991px){
+    :root{
+        --bigFontSize: 2.75rem;
+        --h1FontSize: 1.5rem;
+        --h2FontSize: 1.25rem;
+        --h3FontSize: 1rem;
+        --normalFontSize: 0.938rem;
+        --smallFontSize: 0.813rem;
+        --smallerFontSize: 0.75rem;
+    }
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html{
+    scroll-behavior: smooth;
+    // font-size: 62.5%;
+}
+
+body, button, input, textarea{
+    font-family: var(--bodyFont);
+    font-size: var(--normalFontSize);
+}
+
+body{
+    background-color: var(--bodyColor);
+    color: var(--textColor);
+}
+
+h1, h2, h3{
+    color: var(--titleColor);
+    font-weight: var(--fontSemiBold);
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

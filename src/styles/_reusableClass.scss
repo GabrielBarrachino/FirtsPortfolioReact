@@ -1,0 +1,40 @@
+.section{
+    padding: 6rem 0 2rem;
+    .sectionTitle{
+        font-size: var(--h1FontSize);
+        color: var(--titleColor);
+        text-align: center;
+    }
+    .sectionSubtitle{
+        display: block;
+        font-size: var(--smallFontSize);
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+}
+
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+
+.button{
+    display: inline-block;
+    background-color: var(--titleColor);
+    color: var(--containerCollor);
+    padding: 1.25rem 2rem;
+    border-radius: 1rem;
+    font-weight: var(--fontMedium);
+    &:hover{
+        background-color: var(--titleColorDark);
+    }
+}
+
+.buttonIcon{
+    margin-left: var(--mb-0-5);
+}
+
+.buttonFlex{
+    display: inline-flex;
+    align-items: center;
+}
