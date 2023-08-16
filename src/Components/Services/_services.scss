@@ -1,0 +1,147 @@
+.services{
+    .servicesContainer{
+        grid-template-columns: repeat(3, 16.8rem);
+        justify-content: center;
+        column-gap: 1.8rem;
+        .servicesContent{
+            position: relative;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background-color: var(--containerColor);
+            padding: 6rem 0 2rem 2.5rem;
+            .servicesIcon{
+                display: block;
+                font-size: 2rem;
+                color: var(--titleColor);
+                margin-bottom: var(--mb-1);
+            }
+            .servicesTitle{
+                font-size: var(--h3FontSize);
+                margin-bottom: var(--mb-1);
+                font-weight: var(--fontMedium);
+            }
+            .servicesModal{
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: var(--zModal);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 1rem;
+                opacity: 0;
+                visibility: hidden;
+                transition: .3s;
+                &.activeModal{
+                    opacity: 1;
+                    visibility: visible;
+                }
+                .servicesModalContent{
+                    width: 31.25rem;
+                    position: relative;
+                    background-color: var(--containerColor);
+                    padding: 4.5rem 2.5rem 2.5rem;
+                    border-radius: 1.5rem;
+                    .servicesModalClose{
+                        position: absolute;
+                        top: 1.5rem;
+                        right: 1.5rem;
+                        font-size: 1.5rem;
+                        color: var(--titleColor);
+                        cursor: pointer;
+                        padding: .3rem .6rem;
+                        &:hover{
+                            color: rgb(202, 58, 58);
+                            background-color: rgba(202, 58, 58, 0.1);
+                            border-radius: 50%;
+                        }
+                    }
+                    .servicesModalTitle{
+                        font-size: var(--h3FontSize);
+                        font-weight: var(--fontMedium);
+                        margin-bottom: var(--mb-1);
+                    }
+                    .servicesModalDescription{
+                        font-size: var(--smallFontSize);
+                        padding: 0 3.5rem;
+                        margin-bottom: var(--mb-2);
+                    }
+                    .servicesModalTitle, .servicesModalDescription{
+                        text-align: center;
+                    }
+                    .servicesModalServices{
+                        row-gap: .75rem;
+                        .servicesModalService{
+                            display: flex;
+                            align-items: center;
+                            column-gap: .5rem;
+                            .servicesModalIcon{
+                                color: var(--titleColor);
+                                font-size: 1.1rem;
+                            }
+                            .servicesModalInfo{
+                                font-size: var(--smallFontSize);
+                            }
+                        }
+                    }
+                    
+                }  
+            }
+            .servicesButton{
+                color: var(--titleColor);
+                font-size: var(--smallFontSize);
+                display: inline-flex;
+                align-items: center;
+                column-gap: .25rem;
+                cursor: pointer;
+                transition: .3s;
+                &:hover{
+                    transform: translateX(00.25rem);
+                }
+            }
+            .servicesButtonIcon{
+                font-size: 1rem;
+                transition: .3s;
+                &:hover{
+                    transform: translateX(00.25rem);
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 991px){
+        .servicesContainer{
+            grid-template-columns: repeat(3, 13.6rem);
+        }
+    }
+    @media screen and (max-width: 768px){
+        .servicesContainer{
+            grid-template-columns: repeat(2, 1fr);
+            .servicesContent{
+                padding: 3.5rem 0.5rem 1.25rem 1.5rem;
+                .servicesIcon{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 576px){
+        .servicesModalContent{
+            padding: 4.5rem 1.5rem 2.5rem;
+            .servicesModalDescription{
+                padding: 0;
+            }
+        }
+    }
+    @media screen and (max-width: 460px){
+        .servicesContainer{
+            grid-template-columns: max-content;
+            .servicesContent{
+                padding-right: 6rem;
+            }
+        }
+    }
+}
+
