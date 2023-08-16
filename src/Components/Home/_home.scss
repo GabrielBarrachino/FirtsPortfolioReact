@@ -1,0 +1,187 @@
+.home{
+    .homeContainer{
+        row-gap: 7rem;
+        .homeContent{
+            grid-template-columns: 116px repeat(2, 1fr);
+            padding-top: 5.5rem;
+            column-gap: 2rem;
+            align-items: center;
+            .homeSocial{
+                display: grid;
+                grid-template-columns: max-content;
+                row-gap: 1rem;
+                .homeSocialIcon{
+                    font-size: 1.25rem;
+                    color: var(--titleColor);
+                    transition: all .3s;
+                    &:hover{
+                        color: var(--titleColorDark);
+                    }
+                }
+            }
+            .homeImg{
+                background: url(../../Assets/profile.jpg) no-repeat center;
+                background-size: cover;
+                box-shadow: inset 0 0 0 9px rgba(255, 255, 255, 0.2);
+                order: 1;
+                justify-self: center;
+                width: 18.75rem;
+                height: 18.75rem;
+                animation: profileAnimate 8s ease-in-out infinite 1s;
+            }
+            .homeData{
+                .homeTitle{
+                    font-size: var(--bigFontSize);
+                    margin-bottom: var(--mb-0-25);
+                    .home__hand{
+                        width: 2.3rem;
+                        height: 2.3rem;
+                        margin-left: 0.4rem;
+                    }
+                }
+                .homeSubtitle{
+                    position: relative;
+                    font-size: var(--h3FontSize);
+                    padding-left: 5.4rem;
+                    font-weight: var(--fontNormal);
+                    margin-bottom: var(--mb-1);
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        width: 4.3rem;
+                        height: 0.06rem;
+                        background-color: var(--textColor);
+                        left: 0;
+                        top: 0.7rem;
+                    }
+                }
+                .homeDescription{
+                    max-width: 25rem;
+                    margin-bottom: var(--mb-3);
+                }
+                a{
+                    span{
+                        margin-right: .6rem;
+                    }
+                }
+            }
+        }
+        .homeScroll{
+            margin-left: 9.25rem;
+            .homeScrollName{
+                color: var(--titleColor);
+                font-weight: var(--fontMedium);
+                margin-right: var(--mb-0-25);
+                margin-left: 2px;
+            }
+            .homeScrollArrow{
+                font-size: 1.5rem;
+                color: var(--titleColor);
+            }
+        }
+    }
+
+    @media (max-width: 991px){
+        .homeContainer{
+            .homeContent{
+                grid-template-columns: 100px repeat(2, 1fr);
+                column-gap: 1.25rem;
+                .homeImg{
+                    width: 15.6rem;
+                    height: 15.6rem;
+                    box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 0.2);
+                }
+                .homeData{
+                    .homeTitle{
+                        .home__hand{
+                            width: 26px;
+                            height: 26px;
+                        }
+                    }
+                    .homeSubtitle{
+                        padding-left: 3.75rem;
+                        margin-bottom: var(--mb-1);
+                        &::before{
+                            width: 2rem;
+                            top: 0.8rem;
+                        }
+                    }
+                    .homeDescription{
+                        max-width: initial;
+                        margin-bottom: var(--mb-2-5);
+                    }
+                }
+            }
+            .homeScroll{
+                margin-left: 7.5rem;
+            }
+        }
+    }
+    @media (max-width: 768px){
+        .homeContainer{
+            .homeContent{
+                grid-template-columns: 0.5fr 3fr;
+                padding-top: 3.5rem;
+                .homeImg{
+                    order: initial;
+                    justify-self: initial;
+                    box-shadow: inset 0 0 0 6px rgba(255, 255, 255, 0.2);
+                    width: 12.5rem;
+                    height: 12.5rem;
+                }
+                .homeData{
+                    grid-column: 1/3;
+                    .homeDescription{
+                        max-width: 23rem;
+                    }
+                }
+            }
+            .homeScroll{
+                display: none;
+            }
+        }
+    }
+    @media (max-width: 476px){
+        .homeContainer{
+            .homeContent{
+                .homeImg{
+                    width: 11.25rem;
+                    height: 11.25rem;
+                }
+                .homeData{
+                    .homeTitle{
+                        .home__hand{
+                            width: 22px;
+                            height: 22px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.wheel{
+    animation: scroll 2s ease infinite;
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateY(0);
+    }
+    30%{
+        transform: translateY(3.75rem);
+    }
+}
+
+@keyframes profileAnimate{
+    0%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+    50%{
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+    100%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+}

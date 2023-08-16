@@ -1,0 +1,96 @@
+.button{
+    color: var(--containerColor);
+}
+
+.about{
+    .aboutContainer{
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        column-gap: 4rem;
+        .aboutImg{
+            width: 21.8rem;
+            border-radius: 1.5rem;
+            justify-content: center;
+            margin-left: 6rem;
+        }
+        .aboutData{
+            .aboutInfo {
+                grid-template-columns: repeat(3, 8.7rem);
+                gap: .5rem;
+                margin-bottom: var(--mb-2);
+                .aboutBox{
+                    background-color: var(--containerColor);
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                    border-radius: .75rem;
+                    text-align: center;
+                    padding: 1rem 1.25rem;
+                    .aboutIcon{
+                        font-size: 1.5rem;
+                        color: var(--titleColor);
+                        margin-bottom: var(--mb-0-5);
+                    }
+                    .aboutTitle{
+                        font-size: var(--smallFontSize);
+                        font-weight: var(--fontMedium);
+                    }
+                    .aboutSubtitle{
+                        font-size: var(--tinyFontSize);
+                    }
+                }
+            }
+            .aboutDescription{
+                padding: 0 4rem 0 0;
+                margin-bottom: var(--mb-2-5);
+            }
+        }
+    }
+
+    @media screen and (max-width: 991px){
+        .aboutContainer{
+            grid-template-columns: 1fr;
+            row-gap: 2.5rem;
+            place-items: center;
+            .aboutImg{
+                width: 13.7rem;
+                margin-left: 0;
+            }
+            .aboutData{
+                text-align: center;
+                .aboutInfo{
+                    justify-content: center;
+                    .aboutBox{
+                        padding: .75rem .5rem;
+                    }
+                }
+                .aboutDescription{
+                    padding: 0 5rem;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 576px){
+        .aboutContainer{
+            .aboutData{
+                .aboutInfo{
+                    grid-template-columns: repeat(3, 1fr);
+                }
+                .aboutDescription{
+                    padding: 0;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 450px){
+        .aboutContainer{
+            .aboutData{
+                .aboutInfo{
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                .aboutDescription{
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
