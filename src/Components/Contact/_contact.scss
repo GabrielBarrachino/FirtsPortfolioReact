@@ -1,0 +1,130 @@
+.contact{
+    .contactContainer{
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        justify-content: center;
+        column-gap: 6rem;
+        padding-bottom: 3rem;
+        .contactContent{
+            .contactTitle{
+                text-align: center;
+                font-size: var(--h3FontSize);
+                font-weight: var(--fontMedium);
+                margin-bottom: var(--mb-1-5);
+            }
+            .contactInfo{
+                display: grid;
+                row-gap: 1rem;
+                grid-template-columns: 18.7rem;
+                .contactCard{
+                    background-color: var(--containerColor);
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                    padding: 1rem;
+                    border-radius: .75rem;
+                    text-align: center;
+                    .contactCardTitle{
+                        font-weight: var(--fontMedium);
+                    }
+                    .contactCardData{
+                        display: block;
+                        margin-bottom: var(--mb-0-75);
+                    }
+                    .contactCardTitle, .contactCardData{
+                        font-size: var(--smallFontSize);
+                    }
+                    .contactButton{
+                        color: var(--textColor);
+                        font-size: var(--normalFontSize);
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        column-gap: .25rem;
+                        .contactButtonIcon{
+                            font-size: 1.5rem;
+                            transition: .3s;
+                        }
+                        &:hover .contactButtonIcon{
+                            transform: translate(0.25rem);
+                        }
+                    }
+                }
+            }
+            .contactForm{
+                width: 22.5rem;
+                .contactFormDiv{
+                    position: relative;
+                    margin-bottom: var(--mb-2);
+                    height: 4rem;
+                    .contactFormTag{
+                        position: absolute;
+                        top: -0.85rem;
+                        left: 1.25rem;
+                        font-size: var(--smallFontSize);
+                        padding: .25rem;
+                        background-color: var(--bodyColor);
+                        z-index: 10;
+                    }
+                    .contactFormInput{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        padding: 1rem;
+                        width: 100%;
+                        height: 100%;
+                        border: 2px solid rgba(0, 0, 0, 0.3);
+                        background: none;
+                        color: var(--textColor);
+                        outline: none;
+                        border-radius: .75rem;
+                        z-index: 1;
+                    }
+                    .contactFormArea{
+                        height: 11rem;
+                    }
+                }
+                button{
+                    margin-top: 6rem;
+                    span{
+                        margin-right: .5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 991px){
+        .contactContainer{
+            column-gap: 3rem;
+        }
+    }
+    @media screen and (max-width: 768px){
+        .contactContainer{
+            grid-template-columns: 1fr;
+            row-gap: 3rem;
+            .contactContent{
+                .contactInfo{
+                    justify-content: center;
+                }
+                .contactForm{
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 576px){
+        .contactContainer{
+            .contactContent{
+                .contactInfo{
+                    grid-template-columns: 1fr;
+                }
+                .contactForm{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+textarea{
+    resize: none;
+}
