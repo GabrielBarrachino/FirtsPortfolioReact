@@ -1,0 +1,41 @@
+.testimonial{
+    .testimonialContainer{
+        width: 46.8rem;
+        .testimonialCard{
+            background-color: var(--containerColor);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 1.5rem 2rem;
+            border-radius: 1.5rem;
+            margin-bottom: var(--mb-3);
+            .testimonialImg{
+                width: 4.5rem;
+                border-radius: 3rem;
+                margin-bottom: var(--mb-1);
+            }
+            .testimonialName{
+                font-size: var(--normalFontSize);
+                font-weight: var(--fontMedium);
+                margin-bottom: var(--mb-0-25);
+            }
+            .testimonialDescription{
+                font-size: var(--smallFontSize);
+            }
+        }
+    }
+
+    .swiper-pagination-bullet{
+        background-color: var(--textColor);
+    }
+    .swiper-pagination-bullet-active{
+        background-color: var(--titleColor);
+    }
+
+    @media screen and (max-width: 991px){
+        .testimonialContainer{
+            width: initial;
+            .testimonialCard{
+                padding: 1.25rem 1.5rem;
+            }
+        }
+    }
+}
